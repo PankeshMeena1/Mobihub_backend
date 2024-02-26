@@ -1,6 +1,8 @@
 const express = require ("express");
 const dbConnect = require("./config/dbConnect");
 const app = express();
+const cors = require("cors");
+app.use(cors());
 const authRouter = require ('./routes/authRoute');
 const bodyParser = require("body-parser");
 const { errorHandler, notFound } = require("./middlewares/errorHandler");
